@@ -1,14 +1,25 @@
 import 'dart:io';
+import 'dart:async';
 
 main(List<String> args) {
   print("program başladı");
 
-  Basla();
+  dosyagoster();
   print("program bitti...");
 }
 
-Basla() {
+dosyagoster() async {
+ 
+  String dosyaicerik =await Basla();
+  print(" Dosya içeriği : $dosyaicerik");
+}
+
+Future<String> Basla() {
   print("dosya indirme başladı......");
-  sleep(Duration(seconds: 15));
+  Future<String> sonuc = Future.delayed(Duration(seconds: 10), () {
+    return "İndirilen dosya içeriği";
+  });
+
   print("Dosya ındırme bıti");
+  return sonuc;
 }
