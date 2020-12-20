@@ -4,7 +4,7 @@ main(List<String> args) {
   print("program başladı");
 
   Basla();
-  print("program bitti");
+  print("program bitti...");
 }
 
 Basla() {
